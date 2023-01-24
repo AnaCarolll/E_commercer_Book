@@ -1,0 +1,94 @@
+*{
+    
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+    background-image: url(./img/book.png);
+    
+    background-size:1200px 600px ;
+}
+
+a{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.header{
+    background-color: black;
+    box-shadow: 0px 6px 4px rgb(87, 86, 86);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+
+.menu{
+display:flex ;
+
+}
+
+.menu a{
+margin-left: 10px;
+margin-right: 90px;
+
+}
+.logo{
+ font-size: 26px;
+ margin-left: 50px;
+}
+.home:hover{
+color: brown;
+}
+.produtos:hover{
+color: brown;
+}
+.historia:hover{
+color: brown;
+}
+    
+    
+.bem_vindo{
+    font-size: 40px;
+padding-left: 80px;
+padding-top: 200px;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.comecar{
+    color: white;
+   background: brown;
+    transition: background 1s;
+    color: aliceblue;
+    margin-left: 150px;
+    border-radius: 7px;
+
+    height: 30px;
+    width: 120px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.comecar:hover,
+.comecar:focus {
+  background: rgb(71, 42, 42);
+}
+.zap{
+    width: 60px;
+  padding-left: 1140px;
+    margin-top: 190px;
+    z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
