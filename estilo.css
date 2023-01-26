@@ -1,14 +1,12 @@
+
 *{
     
     padding: 0;
     margin: 0;
 }
 
-
 body{
-    background-image: url(./img/book.png);
-    
-    background-size:1200px 600px ;
+    background-color:#A6A6A6;
 }
 
 a{
@@ -17,28 +15,46 @@ a{
     color: aliceblue;
 }
 
-.header{
+/* Header section */ 
+
+header{
     background-color: black;
     box-shadow: 0px 6px 4px rgb(87, 86, 86);
     display: flex;
+    width: 100%;
     justify-content: space-between;
     padding: 20px;
+    position:fixed;
     align-items: center;
 }
 
-.menu{
-display:flex ;
+header #toggler{
+    display: none;
+}
 
+
+.menu li{
+display: inline-block ;
+}
+
+header .fa-bars{
+    font-size: 2rem;
+    color:#ffff;
+    border-radius: 0.5rem;
+    padding: .5rem 0rem;
+    cursor: pointer;
+    display: none;
 }
 
 .menu a{
 margin-left: 10px;
 margin-right: 90px;
-
 }
-.logo{
- font-size: 26px;
- margin-left: 50px;
+
+
+#logo{
+ font-size: 2rem;
+ display: block;
 }
 .home:hover{
 color: brown;
@@ -53,16 +69,17 @@ color: brown;
     
 .bem_vindo{
     font-size: 40px;
-padding-left: 80px;
-padding-top: 200px;
-font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 120px;
+    padding-top: 200px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 .comecar{
     color: white;
    background: brown;
     transition: background 1s;
     color: aliceblue;
-    margin-left: 150px;
+    margin-left: 170px;
     border-radius: 7px;
 
     height: 30px;
@@ -73,22 +90,109 @@ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 .comecar:focus {
   background: rgb(71, 42, 42);
 }
-.zap{
-    width: 60px;
-  padding-left: 1140px;
-    margin-top: 190px;
-    z-index: 2;
+
+/* Home section */ 
+
+
+
+@keyframes bounce {
+    0%, 25%, 50%, 75%, 90%, 100% {
+    transform: translateY(0); }
+    15%,40% {
+    transform: translateY(-20px); }
+    65% ,80% {
+    transform: translateY(-15px); }
+    95% {
+    transform: translateY(-5px); } }
+    button:hover {
+    animation: bounce 2s linear; }
+
+.floatwpp{
+    font-size: 50px;
+    border-radius: 50%;
+    background-color: #25D366;
+    color:#ffffff;
+    width: 80px;
+    padding: 0px;
+    height: 80px;
+    position: fixed;
+    bottom: 30px;
+    border:none;
+    outline:none;
+    right: 40px; 
+    animation: bounce 2.0s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  
+  }
+  
+  .floatwpp i{
+    color: #f3f7f0 !important;
+  }
+  
+
+#home{
+    display: flex;
+    align-items: center;
+    height: 650px !important;
+    width: auto;
+    background: url(./img/book.png) no-repeat;
+    background-size: 90% auto;
+    background-position: 100px 100px;
 }
 
 
 
 
 
+/* Media queries*/
+
+@media (max-width:991px){
+    html{
+      font-size:55%;
+    }
+
+    header{
+        padding: 2rem;
+    }
+}
 
 
+@media (max-width:768px){
+    html .fa-bars{
+        display: block;
+    }
+    header .navbar{
+        position: absolute;
+        top:100%; right:0; left:0;
+        background:rgb(87, 86, 86);
+        border-top: .1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
 
 
+    header #toggler:checked~ .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
 
+    header .menu li{
+        margin: 1.5rem;
+        padding:1.5rem;
+        background: #A6A6A6;
+        width: 100%;
+        border: .1rem solid rgba(0,0,0,.1);
+        display: block;
+    }
+}
+
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+}
 
 
 
